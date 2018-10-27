@@ -93,12 +93,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
-  var multiply2 = multiply(multArr[0], multArr[1]);
-  var multiply3 =  multiply(multiply2[0], multArr[2]);
-  var string1 = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + 'have a product of ' + multiply3 + '.';
+function multiplyArray(testArray) {
+  var multiply2 = multiply(testArray[0], testArray[1]);
+  var multiply3 =  multiply(multiply2[0], testArray[2]);
+  var string1 = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multiply3[0] + '.';
   return [multiply3[0], string1];
 }
+console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
