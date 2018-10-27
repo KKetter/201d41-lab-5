@@ -68,7 +68,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; 
+var testArray = [2, 3, 4];
 function sumArray(sumArr) {
   var sum2 = sum(sumArr[0],sumArr[1]);
   var sum3 = sum(sum2[0], sumArr[2]);
@@ -93,12 +93,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+function multiplyArray(multArr) {
+  var multiply2 = multiply(multArr[0], multArr[1]);
+  var multiply3 =  multiply(multiply2[0], multArr[2]);
+  var string1 = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + 'have a product of ' + multiply3 + '.';
+  return [multiply3[0], string1];
 }
-
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
