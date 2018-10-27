@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
   return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
 }
 
-sum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -24,11 +24,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
-function multiply(a, b) {
-  return [a * b, 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + ' .'];
+function multiply(a, b) { //eslint-disable-line
+  return [a * b, 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.'];
 }
 
-multiply(5, 9);
+testMultiply(5, 9);
 
 /* Problem 3
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
@@ -49,11 +49,11 @@ function sumAndMultiply(a, b, c) {
   var multiply2 = multiply(a, b);
   var multiply3 = multiply(multiply2[0], c);
   var string1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3[0] + '.';
-  var string2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply3[0] + ' .';
+  var string2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply3[0] + '.';
   return [sum3[0], multiply3[0], string1, string2];
 }
 
-console.log(sumAndMultiply(4, 7, 5));
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -68,15 +68,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line
-
+var testArray = [2, 3, 4]; 
+function sumArray(sumArr) {
+  var sum2 = sum(sumArr[0],sumArr[1]);
+  var sum3 = sum(sum2[0], sumArr[2]);
+  var string1 = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sum3[0] + ' is their sum.';
+  return [sum3[0], string1];
 }
-
+console.log(sumArray(testArray));
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
